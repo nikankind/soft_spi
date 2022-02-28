@@ -12,7 +12,7 @@
 #include <rtdevice.h>
 
 #define DBG_TAG               "SPI"
-#ifdef RT_SPI_BITOPS_DEBUG
+#ifdef PKG_SPI_BITOPS_DEBUG
 #define DBG_LVL               DBG_LOG
 #else
 #define DBG_LVL               DBG_ERROR
@@ -422,7 +422,7 @@ rt_uint32_t spi_bit_xfer(struct rt_spi_device *device, struct rt_spi_message *me
     RT_ASSERT(device != NULL);
     RT_ASSERT(message != NULL);
 
-#ifdef RT_SPI_BITOPS_DEBUG
+#ifdef PKG_SPI_BITOPS_DEBUG
     if (!ops->tog_sclk || !ops->set_sclk || !ops->get_sclk)
     {
         LOG_E("SPI bus error, SCLK line not defined");
