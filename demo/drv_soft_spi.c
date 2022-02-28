@@ -18,7 +18,7 @@
 #include <board.h>
 #include <rtthread.h>
 
-#if defined(RT_USING_SPI) && defined(RT_USING_SPI_BITOPS) && defined(RT_USING_PIN)
+#if defined(RT_USING_SPI) && defined(PKG_USING_SPI_BITOPS) && defined(RT_USING_PIN)
 #include <rtdevice.h>
 #include "spi-bit-ops.h"
 

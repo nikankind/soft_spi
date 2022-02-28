@@ -7,7 +7,7 @@ cwd = GetCurrentDir()
 objs = []
 list = os.listdir(cwd)
 
-if GetDepend('RT_USING_SPI_BITOPS'):
+if GetDepend('PKG_USING_SPI_BITOPS'):
     for d in list:
         path = os.path.join(cwd, d)
         if os.path.isfile(os.path.join(path, 'SConscript')):

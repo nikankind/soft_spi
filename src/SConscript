@@ -5,6 +5,6 @@ cwd = GetCurrentDir()
 src	= Glob('*.c')
 path = [cwd]
 
-group = DefineGroup('DeviceDrivers', src, depend = ['RT_USING_SPI_BITOPS'], CPPPATH = path)
+group = DefineGroup('DeviceDrivers', src, depend = ['PKG_USING_SPI_BITOPS'], CPPPATH = path)
 
 Return('group')
