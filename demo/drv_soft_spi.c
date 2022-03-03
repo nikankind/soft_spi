@@ -269,7 +269,7 @@ static void gpio_udelay(rt_uint32_t us)
 //    }
 }
 
-static void soft_i2c_gpio_init(const struct gd32_spi_bit_data *bd)
+static void soft_spi_gpio_init(const struct gd32_spi_bit_data *bd)
 {
     rcu_periph_clock_enable(bd->sclk.clk);
     rcu_periph_clock_enable(bd->mosi.clk);
@@ -311,7 +311,7 @@ int rt_soft_spi_init(void)
         };
         struct rt_spi_bit_obj spi1_obj;
 
-        soft_i2c_gpio_init(&spi1_bdata);
+        soft_spi_gpio_init(&spi1_bdata);
         rt_spi_bit_add_bus(&spi1_obj, "spi1", &spi1_bops);
     }
 
