@@ -309,7 +309,7 @@ int rt_soft_spi_init(void)
             .dir_miso = gpio_dir_miso,
             .udelay   = gpio_udelay,
         };
-        struct rt_spi_bit_obj spi1_obj;
+        static struct rt_spi_bit_obj spi1_obj;
 
         soft_spi_gpio_init(&spi1_bdata);
         rt_spi_bit_add_bus(&spi1_obj, "spi1", &spi1_bops);
